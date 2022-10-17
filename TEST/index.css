@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 10px;
+}
+a {
+    text-decoration: none;
+    color:black;
+}
+a:hover {
+    text-decoration: underline;
+    color: black;
+}
+.wrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+.board_list {
+    border-top: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+}
+.board_list caption {
+    padding: 30px;
+    font-size: 1.5rem;
+}
+.board_list th, td {
+    border-bottom: 1px solid black;
+    border-spacing: 0;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+    font-size : 1.5rem;
+}
+.bt_wrap {
+    text-align: right;
+    margin-top: 30px;
+}
+.bt_wrap a {
+    display: inline-block;
+    border: 1px solid black;
+    text-align: right;
+    font-size: 1.4rem;
+    padding: 10px 30px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+.board_page {
+    margin-top: 30px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.board_page a {
+    font-size: 1.4em;
+    width: 32px;
+    height: 32px;
+    letter-spacing: -1px;
+    display: inline-block;
+    line-height: 32px;
+}
+.board_page a.on {
+    border-color: black;
+    background: black;
+    color: white;
+}
+.board_page .bt {
+    letter-spacing: -2px;
+}
+@media all and (max-width: 1000px) {
+    .wrap {
+        width: 100vw;
+    }
+    .wrap .board_list {
+        width: 100vw;
+    }
+}
+@media all and (min-width: 767px) {
+    .wrap {
+        width: 70vw;
+    }
+}
