@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const a = 100;
+
+        // if (a >= 50) {
+        //     document.write('이상');
+        // }
+        // else {
+        //     document.write('미만');
+        // }
+
+
+            // const a = 1001;
+
+            // switch (a % 3) {
+            //     case 1: {
+            //         document.write('3의 배수');
+            //     }
+            //         break;
+            
+            //     default: {
+            //         document.write('3의 배수 아님');
+            //     }
+            //         break;
+            // }
+            
+            const grade = prompt("몇 학년 입니까??");
+            const score = prompt("몇 점 입니까??");
+
+            const result1 = (grade < 7 && grade > 4 && grade < 3 && grade > 0);
+            const result2 = (grade == 4);
+            const result3 = (score >= 0 && score <= 100);
+            
+            if ( result2 >= 70 && result3 ) {
+                document.write('합격');
+            }
+            else if ( result2 <= 60 && result3 ) {
+                document.write('불합격');
+            }
+            else if ( result1 >= 60 && result3 ) {
+                document.write('합격');
+            }
+            else if ( result1 < 60 && result3) {
+                document.write('불합격');
+            }
+            else  {
+                alert("에러입니다!");
+            }
+    </script>
+</body>
+</html>
