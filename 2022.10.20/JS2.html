@@ -23,32 +23,32 @@
 
         // 2. spread operator(전개 연산자)
 
-        function sample (...items) {
-                console.log(items);
-        }
+        // function sample (...items) {
+        //         console.log(items);
+        // }
 
-        const array = [1, 2, 3, 4]
+        // const array = [1, 2, 3, 4]
 
-        console.log(`전개 연산자를 사용하지 않을때: ${sample(array)}`);
-        //[[1, 2, 3, 4]] 배열안에 배열이 들어왔음
+        // console.log(`전개 연산자를 사용하지 않을때: ${sample(array)}`);
+        // //[[1, 2, 3, 4]] 배열안에 배열이 들어왔음
 
-        console.log(`전개 연산자를 사용할 때: ${sample(...array)}`);
-        //[1, 2, 3, 4] 배열([ ])을 벗겨내고 1, 2, 3, 4 알맹이들을 ...items에 넘겨 주는것이다
+        // console.log(`전개 연산자를 사용할 때: ${sample(...array)}`);
+        // //[1, 2, 3, 4] 배열([ ])을 벗겨내고 1, 2, 3, 4 알맹이들을 ...items에 넘겨 주는것이다
 
         
 
-        // 3. 기본 매개변수
+        // // 3. 기본 매개변수
         
-        function earning (name, wage=9000, hours=40) {
-            console.log(`${name}님의 급여 정보`);
-            console.log(`시급: ${wage}`);
-            console.log(`근무 시간: ${hours}`);
-            console.log(`급여: ${wage * hours}원`);
-            console.log(`=====================`);
-        }
-        earning('구름');
-        earning('별', 10000);
-        earning('달', 10000, 52);
+        // function earning (name, wage=9000, hours=40) {
+        //     console.log(`${name}님의 급여 정보`);
+        //     console.log(`시급: ${wage}`);
+        //     console.log(`근무 시간: ${hours}`);
+        //     console.log(`급여: ${wage * hours}원`);
+        //     console.log(`=====================`);
+        // }
+        // earning('구름');
+        // earning('별', 10000);
+        // earning('달', 10000, 52);
 
 
 
