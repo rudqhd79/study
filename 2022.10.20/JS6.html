@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        let result = numbers.filter(function(a) {
+            console.log(a);
+            return a % 2 === 0; // filter는 return의 조건이 true면 a(값)가 result로 쏙 들어간다~ 
+        }).map(function (a) { 
+            return a * 2; // filter에 나온 값들이 *2가 되어서 result로 쏙 들어간다~
+        }).map(function(a) {
+            return a * 2;
+        })
+        console.log(result); //전역 변수이기에 밖에 써줘야 한다
+    </script>
+</body>
+</html>

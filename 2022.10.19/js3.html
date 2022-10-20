@@ -34,7 +34,19 @@
         // }
         // console.log('프로그램 종료')
 
-        
+        function bmi (a, b) {
+            let result = (a / (b * b));
+            if (bmi > 20 && bmi < 25) {
+            document.write(`체지방 지수 result, '과체중' 입니다`);
+        }
+        else if (bmi > 25 && bmi < 30) {
+            document.write(`체지방 지수 result, '비만' 입니다`);
+        }
+        else {
+            document.write("체지방 지수 '저체중' 또는 '정상' 입니다");
+        }
+            return result ;
+        }
     </script>
 </body>
 </html>
