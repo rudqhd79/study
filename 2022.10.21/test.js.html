@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Pet (nameAll, ageAll, typeAll) {
+            this.name = nameAll
+            this.age = ageAll
+            this.type = typeAll
+            this.cat = function () {
+                console.log(`이 고양이의 종류는 ${this.type}이고 이름과 나이는 "${this.name}", ${this.age}살 입니다`)
+            }
+            this.age1 = function (age) {
+                console.log(`고양이는 ${age} `)
+            }
+            }
+    
+        let pet1 = new Pet('먼치킨', '냐옹이', '2');
+        let pet2 = new Pet('먼치킨', '냐옹이', '2');
+        let pet3 = new Pet('먼치킨', '냐옹이', '2');
+        let pet4 = new Pet('먼치킨', '냐옹이', '2');
+        
+        pet1.cat();
+        pet2.cat();
+        pet3.cat();
+        pet4.cat();
+
+        pet1.age1('2살')
+
+    </script>
+</body>
+</html>

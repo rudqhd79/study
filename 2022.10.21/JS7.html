@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 배열 기반의 다중 할당
+        let [a, b] = [1, 2]
+        console.log(a, b)
+
+        // 객체 기반의 다중 할당
+        const product = {
+            name : 'mango',
+            type: 'sugar',
+            weight: 3,
+        }
+        const { name, type } = product;
+        console.log(name, type);                    // key부분에서 value 내용 출력이 가능하다
+
+        // 객체 기반 다중 할당 깊은 복사
+        const product1 = {
+            ...product
+        }
+
+        product.date = "2020,10,21"
+
+        console.log(product);
+        console.log(product1);
+
+    
+        // 얕은 복사
+        const obj1 = ['우유', '식빵']
+        const obj2 = obj1;                          // 변수 안에 배열 넣음 (데이터 공유)
+    
+        obj2.push('고구마')                         // 배열안에 고구마 투입
+        obj2.push('토마토')                         // 배열안에 토마토 투입
+
+        console.log(obj1)                           // 결과는 obj1과 obj2가 연동 되었음
+        console.log(obj2)                           // 이런걸 얕은 복사라고 한다
+    
+        // 깊은 복사
+        const obj3 = ['우유', '식빵']
+        const obj4 = [...obj3, '감자'];             // 변수 안에 배열을 넣음 (obj4에만 감자 들어감)     
+    
+        obj2.push('고구마')                         // 배열안에 고구마 투입
+        obj2.push('토마토')                         // 배열안에 토마토 투입
+
+        console.log(obj3)                           
+        console.log(obj4)                           
+
+
+
+
+
+
+
+    
+    
+    
+    </script>
+</body>
+</html>

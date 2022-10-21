@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. 리터럴 방식 (6-1-1.html)
+        //객체 = 속성 + 메소드(함수)
+      /*key*/  const pet = {     //value
+      /*key*/  name : '몽몽',    //value
+            // eat : function(food) {
+            //     console.log(`몽몽씨가 ${food}을 먹습니다.`);   //function 전체가 value
+                eat: (food) => {
+                    console.log(`몽몽이가 ${food}를 먹습니다.`);
+                },
+                sleep: (sleeping) => {
+                    console.log(`몽몽이가 ${sleeping}.`);
+                }
+            }
+
+            pet.eat(`사료`);
+            pet.sleep(`잡니다`);
+        //}
+        // console.log(pet.name); //name만 불러오기
+        // pet.eat('사료')  //function 자체에는 console.log 기능을 넣을 수 있어서 밖에 console.log를 넣지 않아도 된다
+                         // 따라서 console.log없이 변수 이름과 key 값만으로 출력이 가능하다
+   
+
+
+
+        //example
+        const person = {
+            name : prompt("이름이 무엇입니까"),
+            age : prompt("나이는 몇 입니까"),
+            tall : prompt("신장이 180이상 (확인) 아니면(취소)를 눌러주세요"),
+            arr : [],
+            studying : function(gps, ezen, study) {
+                console.log(`${gps} ${ezen}에서 ${study}중 입니다.`);
+            }
+            }
+        console.log(person.name);
+        console.log(person.age);
+        console.log(person.tall);
+        person.studying('강남', '이젠아카데미', '공부')
+   
+   
+   </script>            
+</body>
+</html>

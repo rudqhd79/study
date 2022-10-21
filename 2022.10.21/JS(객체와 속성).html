@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 객체 데이터 (JSON)
+        
+        const product = {
+        /*key*/ name : 'mango',     //value
+        /*key*/ type : 'sugar',     //value
+        /*key*/ weight : 3,         //value
+        /*key*/ arr : [1, 2, 3, 4] //value
+        }
+        //데이터 지목해서 보기
+        console.log(product);
+        console.log(product.arr);
+
+        //데이터 바꾸기
+        product.name = '바나나';
+        console.log(product);
+
+        //배열 꺼내오기
+        const result = product.arr;
+        console.log(`product.arr : ${product.arr[2]}`); // = console.log(`result : ${result[2]}`);
+    
+        product.date = '2022/10/21'; //데이터 추가하기 (기존에 없던 key를 입력해서 value를 입력하면 데이터가 추가된다)
+    
+        delete product.weight;       //데이터 삭제하기
+        console.log(product);
+    
+    
+    
+    </script>
+</body>
+</html>

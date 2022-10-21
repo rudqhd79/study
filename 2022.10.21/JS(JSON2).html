@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 객체 데이터(JSON)
+        const product = {
+             name : 'mango',
+             type : 'sugar',
+             weight : 3,    
+             arr : ['안','녕','히']
+        }
+        const product = [{
+            name : '1',
+            age : '25',
+            function sum () {
+                
+            }
+        }, {
+
+        }]
+        const product2 = [{
+            name : 'mango',
+            type : 'sugar',
+            weight : 3,     
+        }, {
+            name : 'mango',
+            type : 'sugar',
+            weight : 3,    
+        }]             //배열안에 배열 넣을 수 있음
+    
+        const product3 = '{"result": ture, "count": 42}'      //문자 데이터
+        const obj = JSON.parse(product3)                      
+        console.log(obj);
+
+
+
+
+        console.log(JSON.parse(product3))                     // product2를 문자데이터로 보여줌
+        console.log(JSON.stringify(product2))                 // product2를 문자데이터로 보여줌
+        console.log(product2[0])                              // 객체 데이터1
+        console.log(product2[2])                              // 객체 데이터2
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>
