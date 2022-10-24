@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <textarea></textarea>
+    <script>
+        const textarea = document.querySelector('textarea');           
+        const h1 = document.querySelector('h1');
+
+
+        //keyup : 키보드에서 손을 땔 때
+        //keypress : 키보드가 입력되었을 때 (아시아권 언어는 잘 안된다)
+        //keydown : 키보드가 눌릴 때 (아시아권 언어는 잘 안된다)
+        textarea.addEventListener('keyup', function () { 
+            const length = textarea.value.length                   //value는 textarea에 입력된 글자를 가져 올 수 있다
+            // console.log(length);                            // 콘솔로그는 내가 입력한 글자들을 보여준다
+            h1.textContent = `글자 수: ${length}`               
+        
+        })  //키보드를 치다가 손에서 떼었을 때 발생하는 이벤트                
+    </script>
+</body>
+</html>

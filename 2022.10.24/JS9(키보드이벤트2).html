@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"></input>
+    <script>
+        //keyup : 키보드에서 손을 땔 때
+        //keypress : 키보드가 입력되었을 때 (아시아권 언어는 잘 안된다)
+        //keydown : 키보드가 눌릴 때 (아시아권 언어는 잘 안된다)
+        const input = document.querySelector('input');
+        input.addEventListener('keydown', function (event) {  //event : 발생한 이벤트에 대한 정보가 들어있다
+            console.log(event.code)            //.code : 입력하면 지운 기록과 타이핑한 모든 기록이 적힌다
+            console.log(event.key)             //.key : 입력하면 지운 기록과 타이핑한 모든 기록이 적힌다
+            console.log(event.keyCode)         //.keycode : 입력한 키가 숫자로 변환되어 나온다
+            console.log(event.altkey)          //.altkey : 
+            console.log(event.ctrlkey)         //
+            console.log(event.shiftkey)        //
+       
+        })                                  
+    </script>
+</body>
+</html>

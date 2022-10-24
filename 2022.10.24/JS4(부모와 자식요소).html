@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        첫번째 div
+        <span>테스트입니다</span>
+    </div>
+    <script>
+        //ceateElement('태그명') : 해당 요소를 생성
+        const header = document.createElement('h1');        //<h1></h1> 생성됨
+        console.log(header)
+        // body에 header를 자식 요소로 넣어준다는 뜻이다 (입양)
+        document.body.appendChild(header);    //body태그에 header를 넣는다   // append는 넣는다는 뜻
+
+        const box = document.querySelector('.box')          // 
+        const spanTag = document.querySelector('span')      // 
+        // box에 header를 자식 요소로 넣는다는 뜻이다
+        box.appendChild(header);            // header를 입양 (header를 box 클래스에 넣어준다)
+        box.removeChild(spanTag);           // spanTag를 파양 (span을 없앤다)
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>좋아하는 동물 선택</h3>
+    <input type="radio" name="pet" value="강아지">
+    <span>강아지</span>
+
+    <input type="radio" name="pet" value="고양이">
+    <span>고양이</span>
+
+    <input type="radio" name="pet" value="햄스터">
+    <span>햄스터</span>
+
+    <input type="radio" name="pet" value="기타">
+    <span>기타</span>
+    <hr>
+    <h3 id="output"></h3>
+    <hr>
+    <input type="checkbox">
+    <h2 id="chk_output"></h2>
+    <script>
+        // 1. 라디오 이벤트
+        let output = document.querySelector('#output')          //h3을 선택
+        let radios = document.querySelectorAll('[name=pet]')       //이름이 pet인 것들 모두(All)선택
+                                                                //쿼리셀렉트All이 들어가면 배열형태로 들어가기에 for문을 써준다
+        radios.forEach(function(radio) {
+            radio.addEventListener('change', function(e) {      //change는 라디오 버튼값이 바뀔때 글씨를 출력하기 위한 기초 작업
+                const current = e.currentTarget
+                if (current.checked) {      //current에 라디오 버튼이 체크가 되어 있는지 확인함
+                    output.textContent = `${current.value}`
+                }
+            })
+        })
+
+
+
+        // 2. 체크 이벤트
+        let chk_output = document.querySelector('#chk_output');
+        const checkbox = document.querySelector('[type=checkbox]');
+
+        checkbox.addEventListener('change', function (e) {      // 
+            if (e.currentTarget.checked) {         //checked는 체크 됐을 때    //e에 current타겟팅이 된다
+                chk_output.textContent = '체크!'
+            }
+            else {
+                chk_output.textContent = '미체크!'
+            }
+        })
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+    </script>
+</body>
+</html>

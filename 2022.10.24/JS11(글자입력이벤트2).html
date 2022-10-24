@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select>
+        <option>떡볶이</option>
+        <option>순대</option>
+        <option>오뎅</option>
+        <option>튀김</option>
+    </select>
+    <p>선택: 떡볶이</p>
+    <script>
+        // change라고 하는 이벤트종류
+
+        const select = document.querySelector('select');
+        const p = document.querySelector('p');
+                                                                 // e는 이벤트 정보
+        select.addEventListener('change', function (e) {         //change는 셀렉트박스가 바뀌는것
+            const options = e.currentTarget.options;             //currentTarget의 options는 select박스의 option들을 다 가져 오는것
+            console.log(options);
+
+            const index = e.currentTarget.options.selectedIndex  //selectedIndex 내가 가져온 것들(currentTarget의 options)의 글자들을 선택하는 것이다
+            console.log(index);
+
+            console.log(options[index])                          // <option>순대</option> 글자만 뽑아 옴
+
+            p.textContent = `선택: ${options[index].textContent}`    // options에 index를 배열번호로 넣어준 이유는 index 자체가 배열 번호처럼 생각 하면 된다
+        })             //click만 하다 change를 해본다                 // textContent는 글자만 뽑아 오는 것
+    
+    
+            // *********** value는 글자뿐만 아니라 구성하는 태그까지 뽑아온다 ***********
+            // *********** textContent는 태그는 가져오지 않고 글자만 뽑아온다 ***********
+    
+    
+    
+    
+    </script>
+</body>
+</html>

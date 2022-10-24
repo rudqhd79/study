@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"> cm =                    
+    <span></span>
+    <select>
+      <option value="10">mm</option>
+      <option value="0.01">m</option>
+      <option value="0.393701">inch</option>
+    </select>
+    <script>
+        let currentVal;     //현재값                            //첫번째는 input
+        let transVal = 10;  //변환상수                          //두번째는 select
+
+        const select = document.querySelector('select');
+        const span = document.querySelector('span');
+        const input = document.querySelector('input');
+
+        //toFixed() : 소수점 몇번째 자리까지 인지 정할 수 있음
+        function calculate () {     //계산해주는 함수
+            span.textContent = (currentVal * transVal).toFixed(2);     // 계산 결과를 문자로 보여준다
+
+
+        }
+
+        select.addEventListener('change', function (e) {    // (1)입력받은 값을 가져온다. (2)계산을 한다.
+            const options = e.currentTarget.options;
+            const index = e.currentTarget.options.selectedIndex;
+            console.log(options[index].value);
+            transVal = options[index].value     //options에 index배열의 value값들을 가져온다
+            calculate();
+
+        })
+
+        select.addEventListener('keyup', function (e) {
+            
+            currentVal = e.currentTarget.value;     //e에 있는 값을 currentTarget을 통해 가져 올 수 있다
+            console.log(currentVal);
+            calculate()
+        })
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
