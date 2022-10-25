@@ -43,7 +43,7 @@
         h1.addEventListener('click', listner)       // 클릭하는 이벤트와 함수 값으로 실행됨
         
         conButton.addEventListener('click', function () {
-             if (isconnect === false) {             // 만약 이벤트 연결이 안된것이 false라면
+             if (isConnect === false) {             // 만약 이벤트 연결이 안된것이 false라면
                 h1.addEventListener('click', listner);
                 p.textContent = '이벤트 연결 상태: 연결';
                 isConnect = true;                   // 이벤트 연결상태는 true로 지정

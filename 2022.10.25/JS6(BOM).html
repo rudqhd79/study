@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="loc">이동!</button>
+    <button onclick="back">뒤로!</button>
+    <script>
+        function loc () {
+            location.href = "./test.html"   //페이지 이동
+        }
+        function back () {
+            history.go(-1)                  //뒤로가기
+            //history.back()
+        
+        }
+        var sWidth =  screen.width;         //주소창의 너비 (해상도)
+        var sHeight =  screen.height;       //주소창의 높이 (해상도)
+        var sColor =  screen.colorDepth;    //주소창의 색
+        console.log(sWidth);
+        console.log(sHeight);
+        console.log(sColor);
+
+    var local = location.href;
+    console.log(local);
+
+    var NaviInfo = "User-agent header sent: " + navigator.userAgent;
+    console.log(NaviInfo);
+    </script>
+</body>
+</html>

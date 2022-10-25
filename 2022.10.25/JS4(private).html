@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //객체 = 속성 + 메소드
+        class Triagle {
+            //속성
+            #length  //this.length를 private로 사용하겠다
+
+            constructor (length) {
+                this.#length = length;  //private로 사용하겠다
+            }
+
+            //*******메소드********
+            get length () {             // 값을 넘겨주는 역할
+                return this.#length     // 값 10을 리턴
+            }
+
+            set length (length) {       //데이터를 세팅하는 역할
+                this.#length = length;
+            }
+
+            //사각형 둘레 구하기
+            get getPerimeter () {
+                return 4 * this.#length;    //private로 사용하겠다
+            }
+
+            //사각형의 넓이 구하기
+            get getArea () {
+                return this.#length * this.#length; //private로 사용하겠다
+            }
+        }
+    
+        const triagle = new Triagle(10);
+        // triagle.#length = -10;   //수정하지 못함   
+        console.log(`length: ${triagle.length}`);   //#length는 볼 수 없음, triagle.length는 10이다
+        // console.log(`getPerimeter(): ${triagle.getPerimeter()}`);        
+        // console.log(`getArea(): ${triagle.getArea()}`);        
+
+
+
+
+
+    </script>
+</body>
+</html>

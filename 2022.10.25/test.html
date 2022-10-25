@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여러 객체</title>
+</head>
+<body>
+    <button onclick="re">새로고침</button>
+    <button onclick="back">뒤로</button>
+
+    <script>
+        function re () {
+            location.reload()   //새로고침
+            //history.go(0)
+        }
+        function back () {
+            history.go(-1)      //뒤로가기
+            //history.back
+            //history.go(2): 2페이지 앞으로
+            //history.go(-2): 2페이지 뒤로
+            //history.go(0): 새로고침
+        }
+        
+        
+        
+        var sWidth =  screen.width;         //주소창의 너비 (해상도)
+        var sHeight =  screen.height;       //주소창의 높이 (해상도)
+        var sColor =  screen.colorDepth;    //주소창의 색
+        console.log(sWidth);
+        console.log(sHeight);
+        console.log(sColor);
+
+    var local = location.href;
+    console.log(local);
+
+    var NaviInfo = "User-agent header sent: " + navigator.userAgent;
+    console.log(NaviInfo);                     
+    </script>
+</body>
+</html>
