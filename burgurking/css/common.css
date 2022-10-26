@@ -57,9 +57,9 @@
 /* scss 변환 사이트: https://www.sassmeister.com/ */
 
 .header {
-	position: fixed;
+	position: fixed;	/*위치 고정*/
     width: 100%;
-    z-index: 2;
+    z-index: 2;			/*position이나 flex 있을떄만 쓸 수 있음*/
     background: white;
 	box-shadow:0 2px 3px rgba(0, 0, 0, 0.2);
 }

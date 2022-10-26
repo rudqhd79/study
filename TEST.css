@@ -1,0 +1,58 @@
+@charset "utf-8" ;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.flex-direction {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.flex-direction > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5px;
+    margin: 10px;
+    background-color: #f54;
+}
+
+.ex1 {
+    width: 400px;
+    height: 100px;
+}
+
+.ex2 {
+    width: 100px;
+    height: 400px;
+    filter: invert();
+}
+
+.flex-direction > div > div {
+    margin: 5px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 17px;
+    background-color: #5f5;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.column-reverse {
+    flex-direction: column-reverse;
+}

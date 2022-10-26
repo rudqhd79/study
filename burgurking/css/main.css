@@ -4,6 +4,12 @@
 @import url('./reset.css');
 /* header, footer, reset */
 
+
+
+.wrap {
+	background: wheat;
+}
+
 .button--shape-red {
 	background-color: #e91b1b; 
 	border: none;
