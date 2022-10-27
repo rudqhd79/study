@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap">
+        <p>
+            <button class="btn1">버튼1</button>
+        </p>
+        <p class="btn_test">
+            <button class="btn2">버튼2</button>
+        </p>
+    </div>
+
+    <script src="./jquery-3.6.1.min.js"></script>
+    <script>
+        $(() => {
+
+            $('.btn1.on').on('mouseover focus', () => {
+                alert('hi!')
+            })
+
+            $('.btn1').addClass('on')     //없던 클래스 on이 생김
+
+
+            //라이브 이벤트 방식(선택자의 부모태그를 선택해야 됨)
+
+            $('.btn2').parent().on('mouseover focus', '.btn2.on', () => {
+                alert('h1')
+            })  //마우스 오버 했을 때 
+
+            $('.btn2').addClass('on')     //없던 클래스 on이 생김
+        })
+    </script>
+</body>
+</html>

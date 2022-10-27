@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <ul id="wrap">
+            <h1>제목1</h1>
+            <p>내용1</p>
+            <p>내용2</p>
+            <p>내용3</p>
+</div>
+    <div id="wrap2">
+            <h1>제목1</h1>
+    </div>
+    <script src="./jquery-3.6.1.min.js"></script>
+    <script>
+
+        $( () => {
+            // $('h1').replaceWith('<h3>헤더바꿈</h3>')    //h1을 h3로 바꿈
+            // $('<h3>헤더바꿈</h3>').replaceAll('h1')     //위에 결과랑 같음
+        })
+
+        // $(() => {
+        //     console.log($('#wrap').children().clone())  //wrap에 자식태그들 복제
+        //     console.log($('#wrap').clone())  //wrap에 태그 복제
+
+        //     var copy = $('#wrap').children().clone()
+        //     $('#wrap2').append(copy)
+        // })
+
+        // $('#wrap').remove() //id wrap 전체 삭제
+
+        // $('#wrap').empty() //id wrap 하위요소 삭제
+
+
+        // $(() => {
+        //     $('#wrap p:eq(2)').after('<p>After</p>')    //내용2번 다음다음 번째 문구 뜸
+        //     $('#wrap p:eq(1)').before('<p>Before</p>')  //내용1번 다음 번째 문구 뜸
+        // })
+
+        // $('<p>After</p>').insertAfter('#wrap p:eq(2)')
+        // $('<p>Before</p>').insertBefore('#wrap p:eq(1)')
+
+        // $('#wrap').append('<p>내용4</p>')   //append는 추가
+        // $('#wrap').prepend('<p>내용0</p>')   //prepend는 앞에 붙이기
+
+        // $('<p>내용4</p>').appendTo('#wrap')
+        // $('<p>내용0</p>').prependTo('#wrap')
+    </script>
+</body>
+</html>

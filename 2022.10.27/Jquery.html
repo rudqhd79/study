@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="wrap">
+        <li id="list_1">
+            <span class="child1">1번 자식입니다</span>
+            <span>1번</span>
+            <span class="child3">2번</span>
+            <span>3번</span>
+            <span class="child5">4번</span>
+        </li>
+        <li id="list_2">
+            <span class="child2">2번 자식입니다</span>
+        </li>
+        <li id="list_3">
+            <span>3번 자식입니다</span>
+        </li>
+    </ul>
+    <h1 class="title">제목</h1>
+    <p class="title">제목</p>
+
+    <script src="./jquery-3.6.1.min.js"></script>
+    <script>
+        $(function() {
+            $('.title').css('color', 'orangered');          //선택자 지목하여 css에 속성 넣기
+        })  //id는 따로 쳐야 적용이 되지만 class는 한번에 묶는 개념이라 단일로도 전체 적용이 가능하다
+
+        // $(function () {
+        //     $('#list_1').parent().css('border', '1px solid red')
+        //     $('#list_1').children('.child').css('border', '1px solid red')
+        //     $('#list_2').parent().css('border', '1px solid black')
+        //     $('#list_3').parents().css('border', '1px solid blue')  //모든것에 적용 parents
+        // })
+            // $('#list_1, #list_2, #list_3').css('list-style', 'none');
+
+        // $('.child2').prev().css('border', '1px solid red')
+        // $('.child2').next().css('border', '1px solid blue')
+
+        $('.child2').siblings().css('border', '1px solid blue')
+
+                        //child3번이 child1번 전까지
+            $('.child3').prevUntil('.child1').css('border', '1px solid red')
+            $('.child3').nextUntil('.child5').css('border', '1px solid blue')
+                        //child3번이 child5번 전까지 
+   
+            $('.child3').closest('#list_1').css('border', '1px solid purple')
+                        //가장 가까운 상위요소(이름이 같아도 제일 가까운 쪽만 선택됨)
+   
+   
+   
+   
+   
+   
+   </script>
+</body>
+</html>
