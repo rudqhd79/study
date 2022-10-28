@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var url = "https://api.openweathermap.org/data/2.5/weather?";
+            url += "appid=edf73211c04b32a2a164506b9ba977e6";
+            url += "&units=metric";
+            url += "&lang=kr";
+            url += "&q=busan";
+
+        const getData = (url) => {
+            return fetch(url)   //fetch는 promise 값을 반환한다
+        }
+
+        getData(url).then(data => data.json()
+        ).then(     //그러면~~ 데이터가 흘러가는 쪽으로 연결되는 역할이라 생각하면 편하다
+            result => console.log(result)   //return을 하지 않은 이유는 값이 하나이기에 생략이 가능하다
+        )
+    </script>
+</body>
+</html>
