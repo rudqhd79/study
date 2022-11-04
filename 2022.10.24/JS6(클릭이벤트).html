@@ -38,7 +38,8 @@
         // 방법 (2)
         const listner = function () {
             counter+=2;
-            h1.textContent = `클릭횟수 : ${counter}`;
+          const h2 = h1.textContent = `클릭횟수 : ${counter}`;
+          h2.textContent = `총 클릭횟수 : ${h2}`
         }
         h1.addEventListener('click', listner)       // 클릭하는 이벤트와 함수 값으로 실행됨
         

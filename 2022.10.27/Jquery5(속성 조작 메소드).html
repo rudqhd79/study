@@ -1,78 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .aqua { background-color: aqua;}
-        .red { background-color: red;}
-        .green { background-color: green;}
-        .yellow { background-color: yellow;}
+        .aqua {
+            background-color: aqua;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
     </style>
 </head>
-<body>
+
+<body> -->
     <div>
-    <ul id="wrap">
-        <li id="list_1">
-            <span class="child1">1번 자식입니다</span>
-            <span>1번</span>
-            <span class="child3">2번</span>
-            <span>3번</span>
-            <span class="child5">4번</span>
-        </li>
-        <li id="list_2">
-            <span class="child2">2번 자식입니다</span>
-        </li>
-        <li id="list_3">
-            <span>3번 자식입니다</span>
-        </li>
-    </ul>
-    <a href="https://www.naver.com" target="_blank">클릭</a>
-</div>
+        <ul id="wrap">
+            <li id="list_1">
+                <span class="child1">1번 자식입니다</span>
+                <span>1번</span>
+                <span class="child3">2번</span>
+                <span>3번</span>
+                <span class="child5">4번</span>
+            </li>
+            <li id="list_2">
+                <span class="child2">2번 자식입니다</span>
+            </li>
+            <li id="list_3">
+                <span>3번 자식입니다</span>
+            </li>
+        </ul>
+        <a href="https://www.naver.com" target="_blank">클릭</a>
+    </div>
     <h1 class="title">제목</h1>
     <p class="green">제목</p>
-
-    <script src="./jquery-3.6.1.min.js"></script>
-    <script>
-        $(() => {
-
-            $('p').toggleClass('green') //있으면 없게, 없으면 있게 만든다
-            console.log($('p').hasClass('green'))
-
-            // $('p').toggleClass('green') //있으면 없게, 없으면 있게 만든다
-
-            $('p').removeClass('red') // red 속성이 지워졌음
-
-            $('p').addClass('aqua') //style에 aqua 배경이 들어가서 바로 넣을 수 있다
-
-            // var result1 = $('#list_1').html();   //html은 입력된 식이나 문자 등 다 보여준다 
-            // console.log(result1)
-            // $('.list_1').html('<a href="#">클릭</a>')
-        
-            var result1 = $('#list_1').text();      //text는 문자만 보여준다
-            console.log(result1)
-            $('.list_1').text('<a href="#">클릭</a>')
-        
-            console.log($('a').attr('href'))        //네이버 주소가 콘솔로그에 뜸
-                        //attr은 태그의 속성(href(네이버주소))을 가져온다
-
-            $('a').attr('href', 'https://www.google.com/search?q=%EC%8B%A0%EB%85%BC%ED%98%84%EC%97%AD+%EC%B9%B4%ED%8E%98&rlz=1C1YTUH_koKR1026KR1026&oq=%EC%8B%A0%EB%85%BC%ED%98%84%EC%97%AD+%EC%B9%B4%ED%8E%98&aqs=chrome..69i57j69i60l3.3600j0j1&sourceid=chrome&ie=UTF-8')
-                        //주소 변경 가능
-            $('a').attr({
-                'href' : 'https://www.naver.com',
-                'target' : '_parent'
-            })
-        
-            $('a').removerAttr('target')
-
-
-
-
-        
-        
-        })
-    </script>
 </body>
+<script src="./jquery-3.6.1.min.js"></script>
+<script>
+    $(() => {
+
+        $('p').toggleClass('green') //있으면 없게, 없으면 있게 만든다
+        console.log($('p').hasClass('green'))
+
+        // $('p').toggleClass('green') //있으면 없게, 없으면 있게 만든다
+
+        $('p').removeClass('red') // red 속성이 지워졌음
+
+        $('p').addClass('aqua') //style에 aqua 배경이 들어가서 바로 넣을 수 있다
+
+        // var result1 = $('#list_1').html();   //html은 입력된 식이나 문자 등 다 보여준다 
+        // console.log(result1)
+        // $('.list_1').html('<a href="#">클릭</a>')
+
+        var result1 = $('#list_1').text();      //text는 문자만 보여준다
+        console.log(result1)
+        $('.list_1').text('<a href="#">클릭</a>')
+
+        console.log($('a').attr('href'))        //네이버 주소가 콘솔로그에 뜸
+        //attr은 태그의 속성(href(네이버주소))을 가져온다
+
+        $('a').attr('href', 'https://www.google.com/search?q=%EC%8B%A0%EB%85%BC%ED%98%84%EC%97%AD+%EC%B9%B4%ED%8E%98&rlz=1C1YTUH_koKR1026KR1026&oq=%EC%8B%A0%EB%85%BC%ED%98%84%EC%97%AD+%EC%B9%B4%ED%8E%98&aqs=chrome..69i57j69i60l3.3600j0j1&sourceid=chrome&ie=UTF-8')
+        //주소 변경 가능
+        $('a').attr({
+            'href': 'https://www.naver.com',
+            'target': '_parent'
+        })
+
+        $('a').removerAttr('target')
+
+
+
+
+
+
+    })
+</script>
+
+
 </html>
